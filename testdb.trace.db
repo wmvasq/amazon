@@ -1,0 +1,3 @@
+2023-07-26 03:48:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CATEGORIAS" not found (this database is empty); SQL statement:
+select c1_0.id,c1_0.name from categorias c1_0 [42104-214]
