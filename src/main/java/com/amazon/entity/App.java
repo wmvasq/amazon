@@ -1,10 +1,14 @@
 package com.amazon.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -25,7 +29,9 @@ public class App {
   private boolean instalado;
   private String descripcion;
 
-  
+  @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+  @JoinColumn(name = "appid")
+  private List<Comentario> comentarios = new ArrayList<>();
 
   public App() {}
 
@@ -109,5 +115,11 @@ public class App {
     this.descripcion = descripcion;
   }
 
+  public List<Comentario> getComentarios() {
+    return comentarios;
+  }
 
+  public void setComentarios(List<Comentario> comentarios) {
+    this.comentarios = comentarios;
+  }
 }
