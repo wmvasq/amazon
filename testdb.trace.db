@@ -399,3 +399,11 @@ CREATE TABLE comentarios (
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-07-26 23:58:14 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (APPS: ""CATEGORIA"" INTEGER NOT NULL)"
+Data conversion error converting "'' (APPS: ""CATEGORIA"" INTEGER NOT NULL)"; SQL statement:
+UPDATE "PUBLIC"."APPS" SET "ID"=? ,"NOMBRE"=? ,"CATEGORIA"=? ,"DEV"=? ,"CALIFICACION"=? ,"PRECIO"=? ,"IMAGEN"=? ,"URL"=? ,"INSTALADO"=? ,"DESCRIPCION"=?  WHERE "ID"=? [22018-214]
+2023-07-26 23:58:14 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (APPS: ""CATEGORIA"" INTEGER NOT NULL)"
+Data conversion error converting "'' (APPS: ""CATEGORIA"" INTEGER NOT NULL)"; SQL statement:
+UPDATE "PUBLIC"."APPS" SET "ID"=? ,"NOMBRE"=? ,"CATEGORIA"=? ,"DEV"=? ,"CALIFICACION"=? ,"PRECIO"=? ,"IMAGEN"=? ,"URL"=? ,"INSTALADO"=? ,"DESCRIPCION"=?  WHERE "ID"=? [22018-214]

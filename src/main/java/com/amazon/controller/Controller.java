@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -46,7 +47,7 @@ public class Controller {
     return appRepository.findAll();
   }
 
-  @PutMapping("/apps/{id}/calificacion")
+  @PutMapping(value = "/apps/{id}/calificacion", produces = "application/json")
   public ResponseEntity<String> updateAppCalificacion(
     @PathVariable Long id,
     @RequestParam(required = false, defaultValue = "0") int calificacion
